@@ -21,17 +21,13 @@ program.on("--help", function() {
         );
         console.log();
     })
-    .option('-f, --force     覆盖原有文件夹如果存在')
-    .command('create <app-name>')
     .description('茶泡饭的项目')
+    .command('create <app-name>')
+    .option('-f, --force', '覆盖原有文件夹如果存在')
+    .option('-v, --vite', '使用vite原生模板搭建')
     .action((name, cmd) => {
-        // const options = cleanArgs(cmd)
-        // if (minimist(process.argv.slice(3))._.length > 1) {
-        //     console.log(chalk.yellow('\n ⚠️  检测到您输入了多个名称，将以第一个参数为项目名，舍弃后续参数哦'))
-        // }
-        // require('../lib/create')(name, options)
-        // require('../lib/clean')(name, cmd);
+        // console.log(name, cmd);
         require("../lib/create")(name, cmd);
-        // getRepoInfo();
     })
+
 program.parse(process.argv);
