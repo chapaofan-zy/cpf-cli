@@ -1,6 +1,6 @@
 {
     "name": "cpf-vite-cli",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "茶泡饭的脚手架",
     "main": "index.js",
     "bin": "bin/cli.js",
